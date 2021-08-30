@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/ivi/css/main.min.css" => "163000120083631",]; ?>
