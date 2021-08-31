@@ -48,28 +48,40 @@
       <div class="preloader__logo"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/logo.svg" alt="ОАО Брестский мясокомбинат  - производитель и поставщик колбасных изделий, мясных полуфабрикатов из Республики Беларусь" title="ОАО Брестский мясокомбинат  - производитель и поставщик колбасных изделий, мясных полуфабрикатов из Республики Беларусь" draggable="false" loading="lazy"></div>
       <progress class="preloader__progress" value="0" max="100"> </progress>
     </div>
+
+
+
     <header class="header" id="header">
       <div class="wrapper header-wrapper"><a class="menu__burger" href="#" role="button" aria-label="Бургер меню" tabindex="0"> <span class="menu__burger-icon"><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span></span>
           <div class="menu__burger-title">Меню</div></a>
-                <nav class="menu-nav" itemscope itemtype="http://schema.org/SiteNavigationElement"><a class="menu__burger __mobile" href="#" role="button" aria-label="Бургер меню" tabindex="0"> <span class="menu__burger-icon"><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span></span></a>
-                  <ul class="menu">
-                    <li class="menu__item __active" itemprop="name">
-                         <a class="menu__link" itemprop="url" href="#code">Зарегистрировать код</a>
-                    </li>
-                    <li class="menu__item" itemprop="name">
-                         <a class="menu__link" itemprop="url" href="#rule">Правила участия</a>
-                    </li>
-                    <li class="menu__item" itemprop="name">
-                         <a class="menu__link" itemprop="url" href="#prize">Призы</a>
-                    </li>
-                    <li class="menu__item" itemprop="name">
-                         <a class="menu__link" itemprop="url" href="#collection">Бренды и коллекции</a>
-                    </li>
-                    <li class="menu__item" itemprop="name">
-                        <a class="menu__link" itemprop="url" href="#contacts">Контакты</a>
-                    </li>
-                  </ul>
-                </nav>
+          <nav class="menu-nav" itemscope itemtype="http://schema.org/SiteNavigationElement"><a class="menu__burger __mobile" href="#" role="button" aria-label="Бургер меню" tabindex="0"> 
+            <span class="menu__burger-icon"><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span><span class="menu__burger-bar"></span></span></a>
+
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top_menu",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
+          </nav>
+
+                
       </div>
     </header>
     <main class="main page-main mt__nan">

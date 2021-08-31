@@ -41,8 +41,7 @@ $APPLICATION->IncludeFile(
     <!--rule-section end-->
     <!--prize-section start-->
     <section class="section prize-section" id="prize">
-
-    	<?$APPLICATION->IncludeComponent(
+        <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"Prize", 
 	array(
@@ -112,12 +111,8 @@ $APPLICATION->IncludeFile(
 	),
 	false
 );?>
-
-    	
-        <!-- <div class="prize-section__bg" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/main-bg.jpg');"></div>
-        <h2 class="section__title prize-section__title animate scroll">Призы</h2><a class="prize__picture animate scroll" href="#prize"> <img class="img--full img--center   " src="<?=SITE_TEMPLATE_PATH?>/img/prize-image-desktop.png" alt="Целый месяц БЕСПЛАТНО" title="Целый месяц БЕСПЛАТНО" draggable="false" loading="lazy"></a> -->
-
-       <?$APPLICATION->IncludeComponent(
+       
+	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"Brand", 
 	array(
@@ -186,7 +181,7 @@ $APPLICATION->IncludeFile(
 	),
 	false
 );?>
-        
-    </section>
+
+      </section>
     <!--prize-section end-->
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

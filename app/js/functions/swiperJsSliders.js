@@ -43,16 +43,33 @@ const swiperJsSliders = () => {
   let prizeSlider = new Swiper(".prize-slider", {
     slidesPerView: 1,
     spaceBetween: 15,
+    grabCursor: true,
+    resizeObserver: true,
+    centeredSlides: true,
+
     autoplay: {
       enabled: true,
       delay: 4500,
     },
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: false,
+        scale: 0.8,
+        origin: "left center",
+        translate: ["-90%", 0, 50],
+        opacity: 0,
+      },
+      next: {
+        shadow: false,
+        scale: 0.8,
+        origin: "left center",
+        translate: ["90%", 0, 50],
+        opacity: 0,
+      },
+    },
     speed: 1100,
     loop: true,
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
   });
 };
 export default swiperJsSliders;
