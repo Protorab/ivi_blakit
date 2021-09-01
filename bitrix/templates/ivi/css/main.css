@@ -2411,6 +2411,7 @@ label {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: calc( 14px + 0 * ((100vw - 320px) / 1600));
+  min-width: calc( 14px + 0 * ((100vw - 320px) / 1600));
   height: calc( 14px + 0 * ((100vw - 320px) / 1600));
   margin-right: calc( 17px + 0 * ((100vw - 320px) / 1600));
   -webkit-box-pack: center;
@@ -5157,6 +5158,10 @@ ol:not([class]) .item-number {
 
   .custom-checkbox__checker {
     width: 14px;
+  }
+
+  .custom-checkbox__checker {
+    min-width: 14px;
   }
 
   .custom-checkbox__checker {
