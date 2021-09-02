@@ -8,7 +8,7 @@ const swiperJsSliders = () => {
       enabled: true,
       delay: 0,
     },
-    speed: 1700,
+    speed: 6000,
     navigation: {
       nextEl: ".collection-slider__next",
       prevEl: ".collection-slider__prev",
@@ -29,10 +29,8 @@ const swiperJsSliders = () => {
         spaceBetween: 30,
       },
     },
-
     grabCursor: true,
     resizeObserver: true,
-
     a11y: {
       paginationBulletMessage: "Перейти к слайду {{index}}",
       prevSlideMessage: "Предыдущий слайд",
@@ -46,7 +44,7 @@ const swiperJsSliders = () => {
     grabCursor: true,
     resizeObserver: true,
     centeredSlides: true,
-
+    grabCursor: true,
     autoplay: {
       enabled: true,
       delay: 4500,
@@ -68,8 +66,17 @@ const swiperJsSliders = () => {
         opacity: 0,
       },
     },
-    speed: 1100,
-    loop: true,
+    navigation: {
+      nextEl: ".prize-slider__btn-next",
+      prevEl: ".prize-slider__btn-prev",
+    },
+    speed: 1300,
+    loop: false,
+    a11y: {
+      paginationBulletMessage: "Перейти к слайду {{index}}",
+      prevSlideMessage: "Предыдущий слайд",
+      nextSlideMessage: "Следующий слайд",
+    },
   });
 };
 export default swiperJsSliders;

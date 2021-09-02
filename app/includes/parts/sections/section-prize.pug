@@ -7,7 +7,15 @@ section.section.prize-section#prize
         include ./../../mixins/img-NL
         +img(
           "./img/prize-image-desktop.png",
-          "Целый месяц БЕСПЛАТНО")
+          "Целый месяц БЕСПЛАТНО ")
+      a(href="#prize").prize-slide.swiper-slide
+        include ./../../mixins/img-NL
+        +img(
+          "./img/prize-image-desktop.png",
+          "Целый месяц БЕСПЛАТНО ")
+    .prize-slider-control
+      button.prize-slider__btn-prev.prize-slider__btn
+      button.prize-slider__btn-next.prize-slider__btn
   h3.section__title.__white-color.collection__title.animate.scroll Бренды и коллекции
   #collection.collection-slider.swiper-container.animate.scroll
     .collection-slides.swiper-wrapper

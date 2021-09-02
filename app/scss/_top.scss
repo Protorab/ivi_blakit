@@ -84,6 +84,7 @@
     @include adaptive(padding-bottom, 30, 30, 0);
     @include adaptive(padding-left, 30, 20, 0);
     transition-delay: 0.3s;
+
     // .top-form__input {
     &__input {
       // .top-form__input-wrap

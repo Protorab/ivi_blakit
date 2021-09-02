@@ -77,6 +77,71 @@
     @media only screen and (max-width: 600px) {
       width: 100%;
     }
+    // .prize-slider-control
+    &-control {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translate(0, -50%);
+      z-index: 3;
+    }
+    // .prize-slider__btn {
+    &__btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: unset;
+      position: relative;
+      @include adaptive(width, 45, 30, 0);
+      @include adaptive(height, 45, 30, 0);
+      @include _transition(all, 0.35s);
+
+      &::before {
+        content: "";
+        display: inline-flex;
+        @include adaptive(width, 15, 15, 0);
+        @include adaptive(height, 15, 15, 0);
+        border-top: 2px solid $accentColor;
+        border-right: 2px solid $accentColor;
+      }
+      // .prize-slider__btn-next {
+      &-next {
+        right: 5px;
+        &::before {
+          transform: rotate(45deg);
+        }
+        @media only screen and (min-width: 1152px) {
+          right: 20px;
+
+          &:hover {
+            right: 0;
+          }
+        }
+      }
+      // .prize-slider__btn-prev {
+      &-prev {
+        left: 5px;
+        &::before {
+          transform: rotate(-135deg);
+        }
+        @media only screen and (min-width: 1152px) {
+          left: 20px;
+
+          &:hover {
+            left: 0;
+          }
+        }
+      }
+      &.swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
   }
   // prize-slides {
   &-slides {
@@ -90,10 +155,13 @@
     width: 100%;
     height: 100%;
     @include _transition(all, 0.45s);
+    transition-delay: 0.2;
     pointer-events: none;
     opacity: 0;
 
     &.swiper-slide-visible {
+      transition-delay: 0;
+
       pointer-events: all;
       opacity: 1 !important;
     }
@@ -107,11 +175,13 @@
   // .collection-slider {
   &-slider {
     width: 100%;
+    transition-timing-function: linear;
   }
   // .collection-slides {
   &-slides {
     width: 100%;
-    transition-timing-function: cubic-bezier(0.3, 0.05, 0.69, 0.96);
+    // transition-timing-function: cubic-bezier(0.3, 0.05, 0.69, 0.96);
+    transition-timing-function: linear;
     transition-delay: 0;
     // justify-content: center;
     // align-items: center;
@@ -124,6 +194,7 @@
     @include adaptive(width, 255, 220, 0);
     @include adaptive(height, 325, 280, 0);
     @include _borderRadius(10px);
+    transition-timing-function: linear;
     overflow: hidden;
   }
 }

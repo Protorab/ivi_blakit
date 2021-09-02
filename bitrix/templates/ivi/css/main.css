@@ -4898,6 +4898,84 @@ ol:not([class]) .item-number {
   margin-bottom: calc( -25px + -20 * ((100vw - 320px) / 1600));
 }
 
+.prize-slider-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 3;
+}
+
+.prize-slider__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: unset;
+  position: relative;
+  width: calc( 30px + 15 * ((100vw - 320px) / 1600));
+  height: calc( 30px + 15 * ((100vw - 320px) / 1600));
+  transition: all ease-in-out .35s;
+  -webkit-transition: all ease-in-out .35s;
+  -moz-transition: all ease-in-out .35s;
+  -ms-transition: all ease-in-out .35s;
+  -o-transition: all ease-in-out .35s;
+}
+
+.prize-slider__btn::before {
+  content: "";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: calc( 15px + 0 * ((100vw - 320px) / 1600));
+  height: calc( 15px + 0 * ((100vw - 320px) / 1600));
+  border-top: 2px solid #ec174f;
+  border-right: 2px solid #ec174f;
+}
+
+.prize-slider__btn-next {
+  right: 5px;
+}
+
+.prize-slider__btn-next::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.prize-slider__btn-prev {
+  left: 5px;
+}
+
+.prize-slider__btn-prev::before {
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.prize-slider__btn.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .prize-slides {
   -webkit-transition-timing-function: cubic-bezier(0.3, 0.05, 0.29, 1);
   -o-transition-timing-function: cubic-bezier(0.3, 0.05, 0.29, 1);
@@ -4921,24 +4999,33 @@ ol:not([class]) .item-number {
   -moz-transition: all ease-in-out .45s;
   -ms-transition: all ease-in-out .45s;
   -o-transition: all ease-in-out .45s;
+  -webkit-transition-delay: 0.2;
+  -o-transition-delay: 0.2;
+  transition-delay: 0.2;
   pointer-events: none;
   opacity: 0;
 }
 
 .prize-slide.swiper-slide-visible {
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
   pointer-events: all;
   opacity: 1 !important;
 }
 
 .collection-slider {
   width: 100%;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
 .collection-slides {
   width: 100%;
-  -webkit-transition-timing-function: cubic-bezier(0.3, 0.05, 0.69, 0.96);
-  -o-transition-timing-function: cubic-bezier(0.3, 0.05, 0.69, 0.96);
-  transition-timing-function: cubic-bezier(0.3, 0.05, 0.69, 0.96);
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
   -webkit-transition-delay: 0;
   -o-transition-delay: 0;
   transition-delay: 0;
@@ -4961,6 +5048,9 @@ ol:not([class]) .item-number {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
   overflow: hidden;
 }
 
@@ -5003,6 +5093,24 @@ ol:not([class]) .item-number {
     -ms-flex: 1 1 calc((100% / 2) - 20px);
     flex: 1 1 calc((100% / 2) - 20px);
     margin: .52083vw;
+  }
+}
+
+@media only screen and (min-width: 1152px) {
+  .prize-slider__btn-next {
+    right: 20px;
+  }
+
+  .prize-slider__btn-next:hover {
+    right: 0;
+  }
+
+  .prize-slider__btn-prev {
+    left: 20px;
+  }
+
+  .prize-slider__btn-prev:hover {
+    left: 0;
   }
 }
 
@@ -5394,6 +5502,22 @@ ol:not([class]) .item-number {
 
   .prize-slider {
     margin-bottom: -45px;
+  }
+
+  .prize-slider__btn {
+    width: 45px;
+  }
+
+  .prize-slider__btn {
+    height: 45px;
+  }
+
+  .prize-slider__btn::before {
+    width: 15px;
+  }
+
+  .prize-slider__btn::before {
+    height: 15px;
   }
 
   .collection-slide {
