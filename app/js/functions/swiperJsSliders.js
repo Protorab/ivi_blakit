@@ -45,10 +45,6 @@ const swiperJsSliders = () => {
     resizeObserver: true,
     centeredSlides: true,
     grabCursor: true,
-    autoplay: {
-      enabled: true,
-      delay: 4500,
-    },
     effect: "creative",
     creativeEffect: {
       prev: {
