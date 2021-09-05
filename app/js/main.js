@@ -2,10 +2,10 @@
 import attrClear from "./functions/attrClear";
 
 // import modalWindow functions
-import { modalClose } from "./functions/modalWindow";
+// import { modalClose } from "./functions/modalWindow";
 
 // import modalWindow init functions
-import modalWindowInit from "./functions/modalWindowInit";
+// import modalWindowInit from "./functions/modalWindowInit";
 
 // import  btns functions
 import btnsFunc from "./functions/btns";
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // function call start
   // ytPlayer();
   // lazyBg();
-  modalWindowInit();
+  // modalWindowInit();
   btnsFunc();
   showVisible();
   window.onscroll = showVisible;
